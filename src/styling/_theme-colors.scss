@@ -1,8 +1,8 @@
-$primary-color: #3f2b96;
-$secondary-color: #a8c0ff;
+$primary-color: #f46b45;
+$secondary-color: #eea849;
 
 $primary-text: #474747;
-$secondary-color: #cacaca;
+$secondary-text: #cacaca;
 
 @mixin theme-gradient{
     background: linear-gradient(to bottom, $secondary-color, $primary-color);
