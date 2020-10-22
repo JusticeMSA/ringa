@@ -1,0 +1,10 @@
+//Import external scss
+@import '../../styling/theme-colors';
+
+.register{
+    height: 100vh;
+    @include theme-gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
