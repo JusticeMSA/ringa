@@ -18,23 +18,28 @@ const Form = () => {
     }
 
     const {onChange, onSubmit, errors, values} = useForm(sendToFirebase, {username: '',email: '', password: ''}, validate);
-
     return(
         <form className='form' onSubmit= {onSubmit}>
-            <p>
-                {values.email}
-            </p>
             <h5>{currentProcess}</h5>
             {
                 currentProcess === 'REGISTER' ?
-                (<input type='text' name='username' placeholder='Username'/>) :
+                (<div>
+                    <input onChange={onChange} type='text' name='username' placeholder='Username'/>
+                    <span>{errors.username}</span>
+                    </div>
+                ) :
                 ''
             }
-            <span>{errors.username}</span>
+            
+           <div>
             <input onChange={onChange} type='email' name='email' placeholder='Email' />
-            <span>{errors.email}</span>
-            <input onChange={onChange} type='password' name='password' placeholder='Password' />
-            <span>{errors.password}</span>
+                <span>{errors.email}</span>
+           </div>
+           <div>
+               <input onChange={onChange} type='password' name='password' placeholder='Password' />
+                <span>{errors.password}</span>
+           </div>
+            
             <button onChange={onChange} type='submit'>{currentProcess}</button>
         </form>
     );

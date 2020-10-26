@@ -4,6 +4,7 @@ export const validate = values => {
 
     if(values.username.trim() === ''){
         errors.username = 'Username cannot be empty';
+        console.log(values);
     }
     if(values.email.trim() === ''){
         errors.email = 'Email cannot be empty';
